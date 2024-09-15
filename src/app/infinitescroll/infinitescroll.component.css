@@ -10,9 +10,9 @@ h6 {
   font-size: 15px;
   margin: 20px 0;
   text-align: center;
-  small {
+  /* :is(small) {
     font-size: 0.5em;
-  }
+  } */
 }
 /* Container for the images */
 .image-grid {
