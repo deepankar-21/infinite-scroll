@@ -1,0 +1,83 @@
+h2 {
+  font-size: 26px;
+  margin: 20px 0;
+  text-align: center;
+  small {
+    font-size: 0.5em;
+  }
+}
+h6 {
+  font-size: 15px;
+  margin: 20px 0;
+  text-align: center;
+  small {
+    font-size: 0.5em;
+  }
+}
+/* Container for the images */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjusts columns based on available space */
+  gap: 16px; /* Space between the images */
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px; /* Optional: Limit the grid's max width */
+}
+
+.scroll-container {
+  height: 650px;
+  width: 100%;
+  overflow: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+/* Each image item */
+.image-item {
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f4f4f4;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.image-item:hover {
+  transform: translateY(-5px); /* Hover effect */
+}
+
+/* The image itself */
+.image-item img {
+  width: 100%; /* Make the image fill its container */
+  height: auto;
+  display: block;
+}
+
+/* Title or caption for each image */
+.image-title {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  background-color: #fff;
+}
+
+.loading-spinner {
+  text-align: center;
+  padding: 20px;
+}
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Smaller columns for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .image-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust for very small screens */
+  }
+}
